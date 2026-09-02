@@ -1,2 +1,1 @@
-# generalist-technical-artist-portfolio
-Generalist Technical Artist Portfolio
+# Generalist Technical Artist Portfolio

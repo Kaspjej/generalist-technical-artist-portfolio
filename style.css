@@ -15,7 +15,7 @@
 
 body {
 	background-color: black;
-	background-image: url("background2.png");
+	background-image: url("res/background.png");
 	background-attachment: fixed;
 	background-position: center;
 	color: var(--text-main);
@@ -24,6 +24,7 @@ body {
 
 header {
 	background-color: var(--surface-color);
+	background-image: url("res/pattern.png");
 	padding: 4rem 2rem;
 	text-align: center;
 	border-bottom: 2px solid var(--primary-color);
@@ -82,6 +83,11 @@ h2 {
 	padding: 1.5rem;
 	border-radius: 8px;
 	border-left: 4px solid var(--primary-color);
+	transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+	transform: translateY(-10px);
 }
 
 .skill-card h3 {
@@ -100,6 +106,11 @@ h2 {
 	border-radius: 8px;
 	overflow: hidden;
 	transition: transform 0.3s ease;
+	background-image: url("res/pattern.png");
+	
+	display: block;
+	text-decoration: none;
+	color: inherit;
 }
 
 .project-card:hover {
@@ -108,7 +119,7 @@ h2 {
 
 .project-media {
 	width: 100%;
-	height: 350px;
+	aspect-ratio: 5 / 4;
 	background-color: #2a2e39;
 	display: flex;
 	align-items: center;
@@ -120,6 +131,7 @@ h2 {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	display: block;
 }
 
 .project-info {
@@ -184,4 +196,48 @@ h2 {
 
 .contact-btn:hover {
 	background-color: white;
+}
+
+/* --- Photography Grid Styles (Masonry Layout) --- */
+
+.photo-grid {
+    column-count: 2;
+    column-gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.photo-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--surface-color);
+    border: 1px solid #333;
+    
+    display: inline-block;
+    width: 100%;
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto; 
+    display: block;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.photo-item:hover img {
+    transform: scale(1.05); 
+    opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+    .photo-grid {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .photo-grid {
+        column-count: 1;
+    }
 }
