@@ -83,11 +83,6 @@ h2 {
 	padding: 1.5rem;
 	border-radius: 8px;
 	border-left: 4px solid var(--primary-color);
-	transition: transform 0.3s ease;
-}
-
-.skill-card:hover {
-	transform: translateY(-10px);
 }
 
 .skill-card h3 {
@@ -192,6 +187,8 @@ h2 {
 	border-radius: 4px;
 	font-weight: bold;
 	margin-top: 0rem;
+	margin-left: 0.2rem;
+	margin-right: 0.2rem;
 }
 
 .contact-btn:hover {
